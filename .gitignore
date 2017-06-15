@@ -1,0 +1,11 @@
+# gitignore
+#
+# files to ignore in all projects
+# --------
+
+# windows, osx, & linux
+.DS_Store
+.Spotlight-V100
+.Trash*
+Desktop.ini
+Thumbs.db
