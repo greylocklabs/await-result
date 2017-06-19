@@ -24,9 +24,9 @@
     },
     "scripts": {
         "clean": "rimraf dist",
-        "prepare": "npm run build",
         "postinstall": "npm run build",
         "prebuild": "npm run clean",
+        "prepublishOnly": "npm run build",
         "build": "babel --no-comments --minified src -d dist",
         "lint": "eslint --cache src/index.js test/index.js",
         "flow": "if [ ! -f .flowconfig ]; then npm run flow init; fi; flow",
