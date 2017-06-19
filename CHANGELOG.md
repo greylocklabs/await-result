@@ -4,7 +4,7 @@ Summary of important updates and bug fixes
 
 ---
 
-## [1.0.2](/compare/v1.0.1...v1.0.2) - 6/19/2017
+## [1.0.3](/compare/v1.0.1...v1.0.3) - 6/19/2017
 
 Added
 

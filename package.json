@@ -1,6 +1,6 @@
 {
     "name": "await-result",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Golang-style error handling for functions that return a Promise",
     "author": "Ty-Lucas Kelley <tylucaskelley@gmail.com>",
     "main": "dist/index.js",
@@ -24,7 +24,6 @@
     },
     "scripts": {
         "clean": "rimraf dist",
-        "postinstall": "npm run build",
         "prebuild": "npm run clean",
         "prepublishOnly": "npm run build",
         "build": "babel --no-comments --minified src -d dist",
