@@ -1,0 +1,16 @@
+{
+    "plugins": [ "add-module-exports" ],
+    "presets": [
+        "bluebird",
+        "flow",
+        [
+            "env", {
+                "targets": {
+                    "node": true
+                },
+                "modules": "commonjs",
+                "debug": false
+            }
+        ]
+    ]
+}

@@ -4,8 +4,16 @@
 # --------
 
 # windows, osx, & linux
+
 .DS_Store
 .Spotlight-V100
 .Trash*
 Desktop.ini
 Thumbs.db
+
+# javascript
+
+test/coverage
+.eslintcache
+node_modules
+npm-debug.log
