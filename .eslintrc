@@ -1,0 +1,76 @@
+{
+    "root": true,
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 2017,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "ava",
+        "flowtype",
+        "promise"
+    ],
+    "env": {
+        "node": true
+    },
+    "extends": [
+        "airbnb",
+        "plugin:ava/recommended",
+        "plugin:flowtype/recommended"
+    ],
+    "rules": {
+        "array-bracket-spacing": [ "error", "always" ],
+        "arrow-body-style": [ "warn", "as-needed" ],
+        "func-style": [ "error", "expression" ],
+        "indent": [ "error", 4, { "SwitchCase": 1 } ],
+        "max-len": [ "warn", 160 ],
+        "no-await-in-loop": "off",
+        "no-bitwise": [ "error", { "allow": [ "|", "&", "~" ] } ],
+        "no-console": "off",
+        "no-param-reassign": [ "error", { "props": false } ],
+        "no-restricted-syntax": "off",
+        "no-underscore-dangle": "off",
+        "require-jsdoc": [ "error", {
+            "require": {
+                "FunctionDeclaration": true,
+                "MethodDefinition": true,
+                "ClassDeclaration": true,
+                "ArrowFunctionExpression": true
+            }
+        }],
+        "valid-jsdoc": [ "error", {
+            "prefer": {
+                "arg": "param",
+                "argument": "param",
+                "class": "class",
+                "return": "returns"
+            },
+            "preferType": {
+                "Boolean": "boolean",
+                "Number": "number",
+                "object": "Object",
+                "String": "string"
+            },
+            "requireParamDescription": true,
+            "requireReturnDescription": true,
+            "requireReturnType": true
+        }],
+
+        "flowtype/no-primitive-constructor-types": 2,
+        "flowtype/require-parameter-type": 2,
+        "flowtype/require-return-type": 2,
+        "flowtype/require-variable-type": [ 2, { "excludeVariableTypes": { "const": "true", "let": "true" } } ],
+        "flowtype/require-valid-file-annotation": 2,
+
+        "import/no-dynamic-require": "off",
+        "import/no-extraneous-dependencies": [ "error", { "devDependencies": true } ],
+
+        "promise/prefer-await-to-then": "error",
+        "promise/avoid-new": "off"
+    },
+    "settings": {
+        "flowtype": {
+            "onlyFilesWithFlowAnnotation": false
+        }
+    }
+}

@@ -1,6 +1,6 @@
 {
     "name": "await-result",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Golang-style error handling for functions that return a Promise",
     "author": "Ty-Lucas Kelley <tylucaskelley@gmail.com>",
     "main": "dist/index.js",
@@ -9,6 +9,9 @@
         "promises",
         "errors",
         "node"
+    ],
+    "files": [
+        "dist/"
     ],
     "homepage": "https://github.com/tylucaskelley/await-result",
     "repository": {
@@ -20,7 +23,17 @@
         "url": "https://github.com/tylucaskelley/await-result/issues"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "clean": "rimraf dist",
+        "prepare": "npm run build",
+        "postinstall": "npm run build",
+        "prebuild": "npm run clean",
+        "build": "babel --no-comments --minified src -d dist",
+        "lint": "eslint --cache src/index.js test/index.js",
+        "flow": "if [ ! -f .flowconfig ]; then npm run flow init; fi; flow",
+        "pretest": "npm run build",
+        "test": "nyc ava test/index.js",
+        "precommit": "npm run lint && npm run flow && npm run test",
+        "prepush": "bash bin/prepush.bash"
     },
     "engines": {
         "node": "^8.0.0",
@@ -30,5 +43,34 @@
         "require": "babel-register",
         "babel": "inherit",
         "failFast": true
+    },
+    "devDependencies": {
+        "ava": "0.19.1",
+        "babel-cli": "6.24.1",
+        "babel-eslint": "7.2.3",
+        "babel-plugin-add-module-exports": "0.2.1",
+        "babel-preset-bluebird": "1.0.1",
+        "babel-preset-env": "1.5.2",
+        "babel-preset-flow": "6.23.0",
+        "babel-register": "6.24.1",
+        "bluebird": "3.5.0",
+        "chalk": "1.1.3",
+        "color-convert": "1.9.0",
+        "cross-spawn-async": "2.2.5",
+        "eslint": "3.19.0",
+        "eslint-config-airbnb": "15.0.1",
+        "eslint-friendly-formatter": "3.0.0",
+        "eslint-plugin-ava": "4.2.1",
+        "eslint-plugin-flowtype": "2.34.0",
+        "eslint-plugin-import": "2.3.0",
+        "eslint-plugin-jsx-a11y": "5.0.3",
+        "eslint-plugin-promise": "3.5.0",
+        "eslint-plugin-react": "7.1.0",
+        "flow-bin": "0.48.0",
+        "has-color": "0.1.7",
+        "husky": "0.13.4",
+        "nsp": "2.6.3",
+        "nyc": "11.0.2",
+        "rimraf": "2.6.1"
     }
 }

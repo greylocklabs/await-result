@@ -1,0 +1,27 @@
+{
+    "check-coverage": true,
+    "lines": 95,
+    "functions": 95,
+    "statements": 95,
+    "branches": 95,
+    "include": [
+        "src/index.js"
+    ],
+    "exclude": [
+        "test/index.js"
+    ],
+    "watermarks": {
+        "lines": [65, 95],
+        "functions": [65, 95],
+        "branches": [65, 95],
+        "statements": [65, 95]
+    },
+    "cache": true,
+    "all": true,
+    "temp-directory": "./test/coverage/.nyc-output",
+    "report-dir": "./test/coverage",
+    "reporter": [
+        "text",
+        "html"
+    ]
+}
