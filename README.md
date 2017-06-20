@@ -34,8 +34,6 @@ getNumUsers((err, num) => {
     console.log(err);
     console.log(num);
 });
-
-
 ```
 
 ## Motivation
@@ -47,8 +45,8 @@ JavaScript while also taking advantage of the new async / await feature availabl
 
 MIT License. Copyright (c) 2017 [Ty-Lucas Kelley](https://tylucaskelley.com)
 
-[npm-image]: https://img.shields.io/npm/v/await-to-js.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/await-to-js
+[npm-image]: https://img.shields.io/npm/v/await-result.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/await-result
 
 [travis-image]: https://img.shields.io/travis/tylucaskelley/await-result.svg?style=flat-square
 [travis-url]: https://travis-ci.org/tylucaskelley/await-result
