@@ -4,6 +4,24 @@ Summary of important updates and bug fixes
 
 ---
 
+## [1.1.0](/releases) - 6/20/2017
+
+Added
+
+* N/A
+
+Changed
+
+* When `throwErr` is set to `true`, only return the result instead of an array including error
+
+Fixed
+
+* N/A
+
+Removed
+
+* N/A
+
 ## [1.0.7](/releases) - 6/20/2017
 
 Added
@@ -20,7 +38,7 @@ Fixed
 
 Removed
 
-N/A
+* N/A
 
 ## [1.0.6](/releases) - 6/19/2017
 
@@ -38,7 +56,7 @@ Fixed
 
 Removed
 
-N/A
+* N/A
 
 ## [1.0.5](/releases) - 6/19/2017
 

@@ -57,3 +57,18 @@ test('Throw an error if throwErr param is set to true', async (t: Object): Promi
     const err = await t.throws(result(p, true));
     t.is(err.message, 'fail');
 });
+
+test('Only return data if promise resolves and throwErr is set to true', async (t: Object): Promise<any> => {
+    const p = new Promise((resolve: Function, reject: Function) => {
+        const success = true;
+
+        if (success) {
+            resolve(100);
+        } else {
+            reject(new Error('fail'));
+        }
+    });
+
+    const res = await result(p, true);
+    t.is(res, 100);
+});

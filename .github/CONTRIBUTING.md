@@ -57,7 +57,8 @@ this process again until the changes are merged in.
 
 Please follow the coding style conventions detailed below:
 
-{guidelines}
+Make sure that `npm run flow && npm run lint` passes and you'll be fine! Otherwise, just try
+to keep the code consistent with what's already there.
 
 [1]: mailto:tylucaskelley@gmail.com
 [2]: https://github.com/tylucaskelley/await-result/issues/new
