@@ -1,6 +1,6 @@
 {
     "name": "await-result",
-    "version": "1.0.7",
+    "version": "1.1.0",
     "description": "Golang-style error handling for functions that return a Promise",
     "author": "Ty-Lucas Kelley <tylucaskelley@gmail.com>",
     "main": "dist/index.js",

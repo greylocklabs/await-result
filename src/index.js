@@ -15,12 +15,17 @@
  * @param {Promise<any>} promise - Promise returned by a function
  * @param {boolean} [throwErr=false] - Whether or not to throw error instead of returning it
  *
- * @returns {Promise<Array>} Array of the form [ err, data ] where err === null if nothing went wrong
+ * @returns {Promise<any>} Array of the form [ err, data ] where err === null if nothing went wrong
  * @throws {Error} If throw param is set to true, throw the error instead of returning it
  */
 const resolve = async function resolve(promise: Promise<any>, throwErr: boolean = false): Promise<any> {
     try {
         const data = await promise;
+
+        if (throwErr) {
+            return data;
+        }
+
         return [ null, data ];
     } catch (err) {
         if (throwErr) {
