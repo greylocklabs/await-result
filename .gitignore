@@ -13,7 +13,11 @@ Thumbs.db
 
 # javascript
 
-test/coverage
-.eslintcache
 node_modules
 npm-debug.log
+
+# app
+
+test/coverage
+.eslintcache
+dist
