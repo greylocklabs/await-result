@@ -4,6 +4,24 @@ Summary of important updates and bug fixes
 
 ---
 
+## [1.0.6](/compare/v1.0.5...v1.0.6) - 6/19/2017
+
+Added
+
+* N/A
+
+Changed
+
+* N/A
+
+Fixed
+
+* Fix JSDoc comment
+
+Removed
+
+N/A
+
 ## [1.0.5](/compare/v1.0.1...v1.0.5) - 6/19/2017
 
 Added
@@ -17,6 +35,7 @@ Changed
 Fixed
 
 * Install process fixed
+* Remove dist/ folder from repo
 
 Removed
 
