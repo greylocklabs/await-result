@@ -9,7 +9,7 @@ Golang-style error handling for functions that return a Promise
 
 ## Installation
 
-For use with Node.js 7.6 or later, or a transpiler that understands ES7. I recommend [Babel](https://babeljs.io)
+For use with Node.js 7.6 or later, or a transpiler that understands ES8. I recommend [Babel](https://babeljs.io)
 personally.
 
 ```bash

@@ -4,6 +4,25 @@ Summary of important updates and bug fixes
 
 ---
 
+## [1.2.0](/releases) - 8/10/2017
+
+Added
+
+* N/A
+
+Changed
+
+* `throwErr` param replaced with a param that allows for an error-handling function
+* Error always returned, never thrown
+
+Fixed
+
+* N/A
+
+Removed
+
+* No longer using Flowtype, still not mature enough as a project
+
 ## [1.1.0](/releases) - 6/20/2017
 
 Added
