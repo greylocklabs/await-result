@@ -1,5 +1,3 @@
-// @flow
-
 /**
  * @file Async / await wrapper to provide golang-style error handling and avoid try / catch blocks
  *
@@ -8,32 +6,27 @@
  */
 
 /**
- * @function resolve
+ * @function result
  * @description Async / await wrapper function
  * @public
  *
  * @param {Promise<any>} promise - Promise returned by a function
- * @param {boolean} [throwErr=false] - Whether or not to throw error instead of returning it
+ * @param {Function} [handler=null] - Function to handle the error thrown by promise
  *
- * @returns {Promise<any>} Array of the form [ err, data ] where err === null if nothing went wrong
- * @throws {Error} If throw param is set to true, throw the error instead of returning it
+ * @returns {Promise<Array>} Array of the form [ err, data ] where err === null if nothing went wrong
  */
-const resolve = async function resolve(promise: Promise<any>, throwErr: boolean = false): Promise<any> {
+const result = async function result(promise, handler = null) {
     try {
         const data = await promise;
 
-        if (throwErr) {
-            return data;
-        }
-
         return [ null, data ];
     } catch (err) {
-        if (throwErr) {
-            throw err;
-        } else {
-            return [ err ];
+        if (typeof handler === 'function') {
+            return [ handler(err) ];
         }
+
+        return [ err ];
     }
 };
 
-export default resolve;
+export default result;

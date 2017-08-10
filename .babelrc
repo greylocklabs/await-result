@@ -2,7 +2,6 @@
     "plugins": [ "add-module-exports" ],
     "presets": [
         "bluebird",
-        "flow",
         [
             "env", {
                 "targets": {

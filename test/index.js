@@ -1,5 +1,3 @@
-// @flow
-
 /**
  * @file Tests for src/index.js
  *
@@ -11,8 +9,8 @@ import test from 'ava';
 
 import result from '../src';
 
-test('Function returns an error and nothing else when promsie is rejected', async (t: Object): Promise<any> => {
-    const p = new Promise((resolve: Function, reject: Function) => {
+test('Function returns an error and nothing else when promsie is rejected', async (t) => {
+    const p = new Promise((resolve, reject) => {
         const success = false;
 
         if (success) {
@@ -27,8 +25,8 @@ test('Function returns an error and nothing else when promsie is rejected', asyn
     t.is(res, undefined);
 });
 
-test('Function returns a result when promise resolves', async (t: Object): Promise<any> => {
-    const p = new Promise((resolve: Function, reject: Function) => {
+test('Function returns a result when promise resolves', async (t) => {
+    const p = new Promise((resolve, reject) => {
         const success = true;
 
         if (success) {
@@ -43,8 +41,8 @@ test('Function returns a result when promise resolves', async (t: Object): Promi
     t.is(res, 'success');
 });
 
-test('Throw an error if throwErr param is set to true', async (t: Object): Promise<any> => {
-    const p = new Promise((resolve: Function, reject: Function) => {
+test('Return correct value when handler param is provided and an error is thrown', async (t) => {
+    const p = new Promise((resolve, reject) => {
         const success = false;
 
         if (success) {
@@ -54,21 +52,25 @@ test('Throw an error if throwErr param is set to true', async (t: Object): Promi
         }
     });
 
-    const err = await t.throws(result(p, true));
-    t.is(err.message, 'fail');
+    const [ err ] = await result(p, (e) => {
+        e.message = 'modified fail';
+        return e;
+    });
+
+    t.is(err.message, 'modified fail');
 });
 
-test('Only return data if promise resolves and throwErr is set to true', async (t: Object): Promise<any> => {
-    const p = new Promise((resolve: Function, reject: Function) => {
-        const success = true;
+test('Return error when handler is provided but is not a function', async (t) => {
+    const p = new Promise((resolve, reject) => {
+        const success = false;
 
         if (success) {
-            resolve(100);
+            resolve('cool');
         } else {
             reject(new Error('fail'));
         }
     });
 
-    const res = await result(p, true);
-    t.is(res, 100);
+    const [ err ] = await result(p, 'not a function');
+    t.is(err.message, 'fail');
 });
