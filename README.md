@@ -1,6 +1,6 @@
 # Await Result
 
-Golang-style error handling for functions that return a Promise
+Error handling for async functions without try/catch blocks
 
 ---
 
@@ -9,16 +9,15 @@ Golang-style error handling for functions that return a Promise
 
 ## Installation
 
-For use with Node.js 7.6 or later, or a transpiler that understands ES8. I recommend [Babel](https://babeljs.io)
-personally.
+For use with Node.js 7.6 or later, unless you're using a transpiler such as [Babel](https://babeljs.io).
 
 ```bash
-$ npm install await-result
+$ npm install --save await-result
 ```
 
-## Docs
+## Usage
 
-See [src/index.js](src/index.js).
+See the comments in [src/index.js](src/index.js) for usage information.
 
 ## Example
 
@@ -38,15 +37,15 @@ getNumUsers((err, num) => {
 
 ## Motivation
 
-I love the way that error handling works in Golang, and wanted to make something to emulate that behavior in
+I find the way that errors are handled in Go to be elegant, and wanted to make something to emulate that behavior in
 JavaScript while also taking advantage of the new async / await feature available in newer versions of Node.js (7.6+).
 
 ## License
 
-MIT License. Copyright (c) 2017 [Ty-Lucas Kelley](https://tylucaskelley.com)
+MIT License. Copyright (c) 2017 [Greylock Labs](https://greylocklabs.com)
 
 [npm-image]: https://img.shields.io/npm/v/await-result.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/await-result
 
-[travis-image]: https://img.shields.io/travis/tylucaskelley/await-result.svg?style=flat-square
-[travis-url]: https://travis-ci.org/tylucaskelley/await-result
+[travis-image]: https://img.shields.io/travis/greylocklabs/await-result.svg?style=flat-square
+[travis-url]: https://travis-ci.org/greylocklabs/await-result

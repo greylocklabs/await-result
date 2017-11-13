@@ -1,7 +1,6 @@
 {
     "plugins": [ "add-module-exports" ],
     "presets": [
-        "bluebird",
         [
             "env", {
                 "targets": {

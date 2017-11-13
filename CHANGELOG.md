@@ -1,116 +1,35 @@
 # Change Log
 
-Summary of important updates and bug fixes
+All notable changes to this project will be documented in this file. The format is based on
+[Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to
+[Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ---
 
-## [1.2.0](/releases) - 8/10/2017
+## [Unreleased](https://github.com/greylocklabs/await-result/compare/2.0.0...HEAD)
 
-Added
+- N/A
 
-* N/A
+## [2.0.0](https://github.com/greylocklabs/await-result/compare/1.2.0...2.0.0) - 11/13/2017
 
-Changed
+### Changed
 
-* `throwErr` param replaced with a param that allows for an error-handling function
-* Error always returned, never thrown
+- Change ownership to @greylocklabs github account
+- Minor refinements to docs, config files (API is the same)
 
-Fixed
+## [1.2.0](https://github.com/greylocklabs/await-result/compare/1.1.0...1.2.0) - 8/10/2017
 
-* N/A
+### Changed
 
-Removed
+- `throwErr` param replaced with a param that allows for an error-handling function
+- Error always returned, never thrown
 
-* No longer using Flowtype, still not mature enough as a project
+### Removed
 
-## [1.1.0](/releases) - 6/20/2017
+- No longer using Flowtype, still not mature enough as a project
 
-Added
+## [1.1.0](https://github.com/greylocklabs/await-result/compare/1.0.7...1.1.0) - 6/20/2017
 
-* N/A
+### Changed
 
-Changed
-
-* When `throwErr` is set to `true`, only return the result instead of an array including error
-
-Fixed
-
-* N/A
-
-Removed
-
-* N/A
-
-## [1.0.7](/releases) - 6/20/2017
-
-Added
-
-* N/A
-
-Changed
-
-* N/A
-
-Fixed
-
-* Update readme
-
-Removed
-
-* N/A
-
-## [1.0.6](/releases) - 6/19/2017
-
-Added
-
-* N/A
-
-Changed
-
-* N/A
-
-Fixed
-
-* Fix JSDoc comment
-
-Removed
-
-* N/A
-
-## [1.0.5](/releases) - 6/19/2017
-
-Added
-
-* N/A
-
-Changed
-
-* N/A
-
-Fixed
-
-* Install process fixed
-* Remove dist/ folder from repo
-
-Removed
-
-* N/A
-
-## [1.0.1](/releases) - 6/18/2017
-
-Added
-
-* Module complete
-* Tests written
-
-Changed
-
-* N/A
-
-Fixed
-
-* N/A
-
-Removed
-
-* N/A
+- When `throwErr` is set to `true`, only return the result instead of an array including error
