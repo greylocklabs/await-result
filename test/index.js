@@ -1,8 +1,8 @@
 /**
- * @file Tests for src/index.js
+ * @file All tests for module
  *
- * @author Ty-Lucas Kelley <tylucaskelley@gmail.com>
- * @copyright MIT License. Copyright (c) 2017 Ty-Lucas Kelley
+ * @author Ty-Lucas Kelley <ty@greylocklabs.com> (https://greylocklabs.com)
+ * @copyright Copyright (c) 2017 Greylock Labs. See LICENSE file for details.
  */
 
 import test from 'ava';
@@ -22,7 +22,7 @@ test('Function returns an error and nothing else when promsie is rejected', asyn
 
     const [ err, res ] = await result(p);
     t.is(err.message, 'fail');
-    t.is(res, undefined);
+    t.is(typeof res, 'undefined');
 });
 
 test('Function returns a result when promise resolves', async (t) => {

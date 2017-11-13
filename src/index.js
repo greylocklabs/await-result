@@ -1,8 +1,8 @@
 /**
- * @file Async / await wrapper to provide golang-style error handling and avoid try / catch blocks
+ * @file Error handling for async functions without try/catch blocks
  *
- * @author Ty-Lucas Kelley <tylucaskelley@gmail.com>
- * @copyright MIT License. Copyright (c) 2017 Ty-Lucas Kelley
+ * @author Ty-Lucas Kelley <ty@greylocklabs.com> (https://greylocklabs.com)
+ * @copyright Copyright (c) 2017 Greylock Labs. See LICENSE file for details.
  */
 
 /**

@@ -7,7 +7,7 @@
 
 # default environment is development
 
-NODE_ENV="${NODE_ENV:-dev}"
+NODE_ENV="${NODE_ENV:-development}"
 
 code=0
 os="$(uname)"
