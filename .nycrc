@@ -1,14 +1,14 @@
 {
+    "require": [ "babel-register" ],
+    "sourceMap": false,
+    "instrument": false,
     "check-coverage": true,
     "lines": 95,
     "functions": 95,
     "statements": 95,
     "branches": 80,
     "include": [
-        "src/index.js"
-    ],
-    "exclude": [
-        "test/"
+        "src/**/*.js"
     ],
     "watermarks": {
         "lines": [ 65, 95 ],

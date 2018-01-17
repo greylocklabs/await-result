@@ -1,14 +1,20 @@
 {
     "plugins": [ "add-module-exports" ],
     "presets": [
+        "flow",
         [
-            "env", {
-                "targets": {
-                    "node": true
-                },
+            "env",
+            {
                 "modules": "commonjs",
-                "debug": false
+                "targets": {
+                    "node": "7.6"
+                }
             }
         ]
-    ]
+    ],
+    "env": {
+        "test": {
+            "plugins": [ "istanbul" ]
+        }
+    }
 }

@@ -1,13 +1,15 @@
+/* @flow */
+
 /**
  * @file Error handling for async functions without try/catch blocks
+ * @module result
  *
  * @author Ty-Lucas Kelley <ty@greylocklabs.com> (https://greylocklabs.com)
- * @copyright Copyright (c) 2017 Greylock Labs. See LICENSE file for details.
+ * @copyright Copyright (c) 2017-2018 Greylock Labs. See LICENSE file for details.
  */
 
 /**
- * @function result
- * @description Async / await wrapper function
+ * Async / await wrapper function
  * @public
  *
  * @param {Promise<any>} promise - Promise returned by a function
@@ -15,9 +17,9 @@
  *
  * @returns {Promise<Array>} Array of the form [ err, data ] where err === null if nothing went wrong
  */
-const result = async function result(promise, handler = null) {
+const result: Function = async (promise: Promise<any>, handler: ?Function = null): Promise<*> => {
     try {
-        const data = await promise;
+        const data: Promise<any> = await promise;
 
         return [ null, data ];
     } catch (err) {

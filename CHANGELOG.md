@@ -6,9 +6,20 @@ All notable changes to this project will be documented in this file. The format 
 
 ---
 
-## [Unreleased](https://github.com/greylocklabs/await-result/compare/2.0.0...HEAD)
+## [Unreleased](https://github.com/greylocklabs/await-result/compare/2.1.0...HEAD)
 
 - N/A
+
+## [2.1.0](https://github.com/greylocklabs/await-result/compare/2.0.0...2.1.0) - 01/17/2018
+
+### Added
+
+- Flowtype being used again
+
+### Changed
+
+- Update config files
+- Switch from `mdl` to `markdownlint`
 
 ## [2.0.0](https://github.com/greylocklabs/await-result/compare/1.2.0...2.0.0) - 11/13/2017
 

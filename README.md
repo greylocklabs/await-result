@@ -1,18 +1,23 @@
 # Await Result
 
-Error handling for async functions without try/catch blocks
+> Error handling for async functions without try/catch blocks
 
 ---
 
 [![NPM version][npm-image]][npm-url]
 [![Build status][travis-image]][travis-url]
 
+## Motivation
+
+I find the way that errors are handled in Go to be elegant, and wanted to make something to emulate that behavior in
+JavaScript while also taking advantage of the new async / await feature available in newer versions of Node.js (7.6+).
+
 ## Installation
 
 For use with Node.js 7.6 or later, unless you're using a transpiler such as [Babel](https://babeljs.io).
 
 ```bash
-$ npm install --save await-result
+$ npm install await-result
 ```
 
 ## Usage
@@ -35,14 +40,13 @@ getNumUsers((err, num) => {
 });
 ```
 
-## Motivation
+## Contributing
 
-I find the way that errors are handled in Go to be elegant, and wanted to make something to emulate that behavior in
-JavaScript while also taking advantage of the new async / await feature available in newer versions of Node.js (7.6+).
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-MIT License. Copyright (c) 2017 [Greylock Labs](https://greylocklabs.com)
+MIT License. Copyright (c) 2017-2018 [Greylock Labs](https://greylocklabs.com)
 
 [npm-image]: https://img.shields.io/npm/v/await-result.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/await-result
