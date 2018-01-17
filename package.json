@@ -65,7 +65,9 @@
         "eslint-plugin-import": "2.8.0",
         "eslint-plugin-promise": "3.6.0",
         "eslint-plugin-security": "1.4.0",
+        "flow-bin": "0.63.1",
         "husky": "0.14.3",
+        "markdownlint-cli": "0.6.0",
         "nyc": "11.4.1",
         "rimraf": "2.6.2"
     }
