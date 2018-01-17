@@ -4,8 +4,9 @@
 
 ---
 
-[![NPM version][npm-image]][npm-url]
-[![Build status][travis-image]][travis-url]
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Coverage Status][coveralls-image]][coveralls-url]
 
 ## Motivation
 
@@ -53,3 +54,6 @@ MIT License. Copyright (c) 2017-2018 [Greylock Labs](https://greylocklabs.com)
 
 [travis-image]: https://img.shields.io/travis/greylocklabs/await-result.svg?style=flat-square
 [travis-url]: https://travis-ci.org/greylocklabs/await-result
+
+[coveralls-image]: https://coveralls.io/repos/github/greylocklabs/http/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/greylocklabs/http?branch=master
