@@ -13,18 +13,27 @@
  * @public
  *
  * @param {Promise<any>} promise - Promise returned by a function
- * @param {Function} [handler=null] - Function to handle the error thrown by promise
+ * @param {Function|boolean} [handler=null] - Function to handle the error thrown by promise, or
+ * true if error should be thrown
  *
- * @returns {Promise<Array>} Array of the form [ err, data ] where err === null if nothing went wrong
+ * @returns {Promise<any>} Array of the form [ err, data ] or just the data if handler === true
+ *
+ * @throws {Error} Error from rejected Promise is thrown if handler === true
  */
-const result: Function = async (promise: Promise<any>, handler: ?Function = null): Promise<*> => {
+const result: Function = async (promise: Promise<any>, handler: ?Function | boolean = null): Promise<any> => {
     try {
         const data: Promise<any> = await promise;
+
+        if (handler === true) {
+            return data;
+        }
 
         return [ null, data ];
     } catch (err) {
         if (typeof handler === 'function') {
             return [ handler(err) ];
+        } else if (handler === true) {
+            throw err;
         }
 
         return [ err ];

@@ -23,21 +23,58 @@ $ npm install await-result
 
 ## Usage
 
-See the comments in [src/index.js](src/index.js) for usage information.
+There are a few ways you can use this helper function:
+
+### Get error and return value
+
+You'll usually just call the function with only one argument - the Promise:
+
+```js
+const [ err, data ] = await result(func());
+```
+
+You can then do something with the error and return value without having to worry about try-catch
+blocks.
+
+### Process error first
+
+Similarly, you can get the error and return value, but process the error first; this is very useful in
+larger projects where you might want to operate on the error in a consistent manner:
+
+```js
+const [ processedErr, data ] = await result(func(), customErrorHandler);
+```
+
+### Throw error
+
+In case you just want to throw the error, you can call the function as follows; note that you don't have to
+destructure the result to get the data:
+
+```js
+const data = await result(func(), true);
+```
+
+Passing `true` as the second parameter tells the function to throw any errors that happen.
 
 ## Example
 
 ```js
 import result from 'await-result';
 
-async function getNumUsers(cb) {
-    const [ err, num ] = await result(database.userCount());
-    if (!err) return cb(num);
+async function getNumUsers() {
+    const [ err, num ] = await result(database.userCount(), customErrorHandler);
+
+    if (err) {
+        throw err;
+    }
+
+    return num;
 }
 
-getNumUsers((err, num) => {
+getNumUsers().then((count) => {
+    console.log(`Total number of users: ${count}`);
+}).catch((err) => {
     console.log(err);
-    console.log(num);
 });
 ```
 

@@ -60,7 +60,7 @@ test('Return correct value when handler param is provided and an error is thrown
     t.is(err.message, 'modified fail');
 });
 
-test('Return error when handler is provided but is not a function', async (t) => {
+test('Return error when handler is provided but is not a function or true', async (t) => {
     const p = new Promise((resolve, reject) => {
         const success = false;
 
@@ -73,4 +73,34 @@ test('Return error when handler is provided but is not a function', async (t) =>
 
     const [ err ] = await result(p, 'not a function');
     t.is(err.message, 'fail');
+});
+
+test('Get the result without destructuring when handler is provided and is true', async (t) => {
+    const p = new Promise((resolve, reject) => {
+        const success = true;
+
+        if (success) {
+            resolve('success');
+        } else {
+            reject(new Error('fail'));
+        }
+    });
+
+    const res = await result(p, true);
+    t.is(res, 'success');
+});
+
+test('Throw the error when handler is provided and is true', async (t) => {
+    const p = new Promise((resolve, reject) => {
+        const success = false;
+
+        if (success) {
+            resolve('nice');
+        } else {
+            reject(new Error('fail'));
+        }
+    });
+
+    const error = await t.throws(result(p, true));
+    t.is(error.message, 'fail');
 });

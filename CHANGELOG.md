@@ -6,9 +6,15 @@ All notable changes to this project will be documented in this file. The format 
 
 ---
 
-## [Unreleased](https://github.com/greylocklabs/await-result/compare/2.1.0...HEAD)
+## [Unreleased](https://github.com/greylocklabs/await-result/compare/2.2.0...HEAD)
 
 - N/A
+
+## [2.2.0](https://github.com/greylocklabs/await-result/compare/2.1.0...2.2.0) - 01/27/2018
+
+### Changed
+
+- Restored old behavior - error can be thrown if desired
 
 ## [2.1.0](https://github.com/greylocklabs/await-result/compare/2.0.0...2.1.0) - 01/17/2018
 
