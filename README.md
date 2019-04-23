@@ -1,12 +1,12 @@
-# Await Result
+# await-result
 
 > Error handling for async functions without try/catch blocks
 
 ---
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Coverage Status][coveralls-image]][coveralls-url]
+[![npm version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]
+[![code coverage][coveralls-image]][coveralls-url]
 
 ## Motivation
 
@@ -18,6 +18,12 @@ JavaScript while also taking advantage of the new async / await feature availabl
 For use with Node.js 7.6 or later, unless you're using a transpiler such as [Babel](https://babeljs.io).
 
 ```bash
+$ yarn add await-result
+```
+
+Or, with `npm`:
+
+```bash
 $ npm install await-result
 ```
 
@@ -27,7 +33,7 @@ There are a few ways you can use this helper function:
 
 ### Get error and return value
 
-You'll usually just call the function with only one argument - the Promise:
+You'll usually just call the function with only one argument - the function that returns a Promise:
 
 ```js
 const [ err, data ] = await result(func());
@@ -44,17 +50,6 @@ larger projects where you might want to operate on the error in a consistent man
 ```js
 const [ processedErr, data ] = await result(func(), customErrorHandler);
 ```
-
-### Throw error
-
-In case you just want to throw the error, you can call the function as follows; note that you don't have to
-destructure the result to get the data:
-
-```js
-const data = await result(func(), true);
-```
-
-Passing `true` as the second parameter tells the function to throw any errors that happen.
 
 ## Example
 
@@ -84,7 +79,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-MIT License. Copyright (c) 2017-2018 [Greylock Labs](https://greylocklabs.com)
+MIT License. See [LICENSE](LICENSE) for details.
 
 [npm-image]: https://img.shields.io/npm/v/await-result.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/await-result

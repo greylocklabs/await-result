@@ -55,10 +55,7 @@ to ensure you aren't duplicating anyone's work. Then, do the following:
 
 ## Code style
 
-Please follow the coding style conventions detailed below:
-
-Make sure that `npm run flow && npm run lint` passes and you'll be fine! Otherwise, just try to keep the code
-consistent with what's already there.
+Just ensure that `yarn lint` passes!
 
 [1]: mailto:ty@greylocklabs.com
 [2]: https://github.com/greylocklabs/await-result/issues/new

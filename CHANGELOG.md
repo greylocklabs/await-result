@@ -6,9 +6,18 @@ All notable changes to this project will be documented in this file. The format 
 
 ---
 
-## [Unreleased](https://github.com/greylocklabs/await-result/compare/2.2.0...HEAD)
+## [Unreleased](https://github.com/greylocklabs/await-result/compare/2.3.0...HEAD)
 
 - N/A
+
+## [2.3.0](https://github.com/greylocklabs/await-result/compare/2.2.0...2.3.0)
+
+### Changed
+
+- Remove ability to throw error (just throw it upon Promise resolution if you want to)
+- Switch to TypeScript
+- Update all dependencies and config files
+- Switch to Jest for testing
 
 ## [2.2.0](https://github.com/greylocklabs/await-result/compare/2.1.0...2.2.0) - 01/27/2018
 
