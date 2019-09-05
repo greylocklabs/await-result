@@ -24,7 +24,7 @@ $ yarn add await-result
 Or, with `npm`:
 
 ```bash
-$ npm install await-result
+$ npm install --save await-result
 ```
 
 ## Usage
@@ -87,5 +87,5 @@ MIT License. See [LICENSE](LICENSE) for details.
 [travis-image]: https://img.shields.io/travis/greylocklabs/await-result.svg?style=flat-square
 [travis-url]: https://travis-ci.org/greylocklabs/await-result
 
-[coveralls-image]: https://coveralls.io/repos/github/greylocklabs/http/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/github/greylocklabs/http?branch=master
+[coveralls-image]: https://coveralls.io/repos/github/greylocklabs/await-result/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/greylocklabs/await-result?branch=master
