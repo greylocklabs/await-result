@@ -1,6 +1,6 @@
 {
   "name": "await-result",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Error handling for async functions without try/catch blocks",
   "author": {
     "name": "Ty-Lucas Kelley",
@@ -29,52 +29,55 @@
   ],
   "source": "src/index.ts",
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "umd:main": "dist/index.umd.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rm -rf node_modules dist",
     "postclean": "yarn install",
     "prebuild": "rm -rf dist",
     "build": "microbundle",
-    "lint": "yarn lint:js && yarn lint:md",
-    "lint:js": "eslint src --ext ts",
-    "lint:md": "markdownlint README.md CHANGELOG.md .github",
+    "lint": "yarn lint:eslint && yarn lint:markdownlint",
+    "lint:eslint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx src",
+    "lint:markdownlint": "markdownlint README.md CHANGELOG.md .github",
     "test": "jest",
     "test:coverage": "jest --coverage && cat coverage/lcov.info | coveralls",
     "prepublishOnly": "yarn build && yarn test"
   },
   "engines": {
-    "node": ">= 8",
-    "yarn": ">= 1.15.2"
+    "node": ">= 8"
   },
   "husky": {
     "hooks": {
       "pre-commit": "yarn test",
-      "pre-push": "yarn test"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.3",
-    "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
-    "@greylocklabs/eslint-config": "3.0.3",
-    "@types/jest": "24.0.11",
-    "@typescript-eslint/eslint-plugin": "^1.6.0",
-    "@typescript-eslint/parser": "^1.6.0",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@commitlint/cli": "8.1.0",
+    "@commitlint/config-conventional": "8.1.0",
+    "@greylocklabs/eslint-config": "3.1.0",
+    "@types/jest": "24.0.18",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
     "@vue/eslint-config-typescript": "^4.0.0",
-    "coveralls": "3.0.3",
-    "eslint": "^5.16.0",
-    "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-jest": "^22.4.1",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-react": "^7.12.4",
+    "coveralls": "3.0.6",
+    "eslint": "^6.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.16.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-security": "^1.4.0",
-    "eslint-plugin-vue": "^5.2.2",
-    "husky": "1.3.1",
-    "jest": "24.7.1",
-    "markdownlint-cli": "0.15.0",
+    "eslint-plugin-vue": "^5.2.3",
+    "husky": "3.0.5",
+    "jest": "24.9.0",
+    "markdownlint-cli": "0.18.0",
     "microbundle": "0.11.0",
     "shelljs": "0.8.3",
     "ts-jest": "24.0.2",
-    "typescript": "3.4.4"
+    "typescript": "^3.6.2"
   }
 }

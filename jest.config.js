@@ -10,9 +10,6 @@ module.exports = {
       statements: 95,
     },
   },
-  testMatch: [
-    '**/*.spec.ts',
-  ],
   preset: 'ts-jest',
   testEnvironment: 'node',
   globals: {

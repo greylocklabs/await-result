@@ -1,4 +1,4 @@
-import result from '../src';
+import result from '..';
 
 describe('await-result', () => {
   it('returns an array with no error and the resolved promise', async () => {
