@@ -6,18 +6,24 @@ All notable changes to this project will be documented in this file. The format 
 
 ---
 
-## [Unreleased](https://github.com/greylocklabs/await-result/compare/2.3.0...HEAD)
+## [Unreleased](https://github.com/greylocklabs/await-result/compare/2.3.2...HEAD)
 
 - N/A
 
-## [2.3.1](https://github.com/greylocklabs/await-result/compare/2.3.0...2.3.1)
+## [2.3.2](https://github.com/greylocklabs/await-result/compare/2.3.0...2.3.1) - 02/24/2020
+
+### Changed
+
+- Update dependencies
+
+## [2.3.1](https://github.com/greylocklabs/await-result/compare/2.3.0...2.3.1) - 09/04/2019
 
 ### Changed
 
 - Update all dependencies
 - Minor config file changes
 
-## [2.3.0](https://github.com/greylocklabs/await-result/compare/2.2.0...2.3.0)
+## [2.3.0](https://github.com/greylocklabs/await-result/compare/2.2.0...2.3.0) - 04/22/2019
 
 ### Changed
 
